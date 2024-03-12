@@ -34,6 +34,7 @@ internal class Program
         {
             Console.WriteLine("User has not logged in");
         }
+<<<<<<< HEAD
 
         //Create a new Time record
         //Click on the Admin dropdown menu and navigate to Time and Material module
@@ -87,5 +88,7 @@ internal class Program
         {
             Console.WriteLine("Test failed");
         }
+=======
+>>>>>>> parent of ff8b8f2... Second test case added to verify new time record creation flow
     }
 }
