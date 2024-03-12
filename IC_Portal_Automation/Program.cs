@@ -72,7 +72,7 @@ internal class Program
         IWebElement saveButton = driver.FindElement(By.Id("SaveButton"));
         saveButton.Click();
 
-        Thread.Sleep(2000);
+        Thread.Sleep(3000);
 
         //Check if the new time record has been created
         IWebElement goToTheLastPageButton = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]/span"));
