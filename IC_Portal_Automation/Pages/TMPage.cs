@@ -1,4 +1,5 @@
 ﻿using IC_Portal_Automation.Utilities;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -52,14 +53,19 @@ namespace IC_Portal_Automation.Pages
             Wait.WaitToBeVisible(driver, "XPath", "//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]", 2);
 
             IWebElement newRecordCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]"));
-            if (newRecordCode.Text == "CodeTest")
-            {
-                Console.WriteLine("New Time record has been created successfully");
-            }
-            else
-            {
-                Console.WriteLine("Test failed");
-            }
+            
+            //Option 1 Validation
+            Assert.That(newRecordCode.Text == "CodeTest", "New record code and expected code do not match");
+
+            //Option 2 Validation
+            //if (newRecordCode.Text == "CodeTest")
+            //{
+            //    Assert.Pass("New Time record has been created successfully");
+            //}
+            //else
+            //{
+            //    Assert.Fail("Test failed");
+            //}
         }
         public void EditTMRecord(IWebDriver driver)
         {
