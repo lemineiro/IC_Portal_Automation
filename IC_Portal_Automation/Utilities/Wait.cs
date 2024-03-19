@@ -49,5 +49,10 @@ namespace IC_Portal_Automation.Utilities
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector(locatorValue)));
             }
         }
+
+        internal static void WaitToBeVisible(IWebDriver driver, string v1, string v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

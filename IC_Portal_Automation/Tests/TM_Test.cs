@@ -44,10 +44,10 @@ namespace IC_Portal_Automation.Tests
             tMPageObj.DeleteTMRecord(driver);
         }
 
-        [TearDown]
-        public void CloseTestRun()
-        {
-            driver.Quit();
-        }
+        //[TearDown]
+        //public void CloseTestRun()
+        //{
+        //    driver.Close();
+        //}
     }
 }

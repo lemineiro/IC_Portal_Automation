@@ -42,7 +42,7 @@ namespace IC_Portal_Automation.Pages
                 IWebElement loginButton = driver.FindElement(loginButtonLocator);
                 loginButton.Click();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Assert.Fail("TurnUp Portal login page did not launch");
                 throw;
